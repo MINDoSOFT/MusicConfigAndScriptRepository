@@ -1,3 +1,11 @@
+-- This script loops through all the tracks, and tries to find the ReaControlMIDI fx.
+-- If it does find it, then it disables and enables the bank/program select
+-- to reload the program on a hardware device.
+--
+-- Useful when used in combination with SWS Extension -> Startup actions->
+-- Set project startup action. To load the midi program changes on the hardware
+-- on project load.
+
 local info = debug.getinfo(1,'S');
 reaper.ShowConsoleMsg("\nRunning: " .. info.source);
 
@@ -53,3 +61,4 @@ do
 end
 
 reaper.ShowConsoleMsg("\nLoaded " .. voicesLoaded .. " voices.");
+reaper.ShowConsoleMsg("\nFinished running: " .. info.source);
