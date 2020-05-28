@@ -22,6 +22,11 @@ https://python-reapy.readthedocs.io/en/latest/install_guide.html#get-configurati
 
 Reaper version that I tested this is v6.11
 
+Please go ahead and install also the Reaper Yamaha MX keymap from
+https://panos.dukes.gr/cms/reaper-and-mx/
+it will make your life easier and your workflow faster. 
+You will be able to click DAW Remote and control Reaper from the Yamaha MX.
+
 
 # Running
 
@@ -36,6 +41,8 @@ to using the script from outside Reaper.
 
 Note: Avoid selecting the first track, because the first voice is used as a buffer,
 in order for you to be able to preview the sound when selecting a voice.
+
+Note: Remember to disable the Local Control from Utility->Midi menu on the Yamaha MX.
 
 
 # Credits
