@@ -43,6 +43,8 @@ Note: Avoid selecting the first track, because the first voice is used as a buff
 in order for you to be able to preview the sound when selecting a voice.
 
 Note: Remember to disable the Local Control from Utility->Midi menu on the Yamaha MX.
+You do this to prevent having a midi echo. Where the device is triggered both from the
+keys and Reaper. 
 
 
 # Credits
