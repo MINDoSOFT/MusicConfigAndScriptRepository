@@ -23,7 +23,7 @@ def set_reacontrol_midi_for_track(track, voiceDict):
 
             print('Loaded voice ' + fx.params['Program'].formatted)
             renameTrack = False
-            if track.name != '':
+            if track.name != '' and track.name != get_default_track_name(track):
                 text = "Overwrite track '" + track.name + "' name ?"
                 title = "YamahaMXReaperUtils"
                 type = "yes-no-cancel"
@@ -37,3 +37,6 @@ def set_reacontrol_midi_for_track(track, voiceDict):
                 track.name = fx.params['Program'].formatted
 
     pass
+
+def get_default_track_name(track):
+    return 'Track ' + str(track.index + 1)
