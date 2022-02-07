@@ -1315,8 +1315,8 @@
 ;  : GM, GS_GM2, XG
 ;
 [DR:PRE]
-0=DR:PwrStdKit1 {{DrumKit=POWER, GM}}
-1=DR:PwrStdKit2 {{DrumKit=POWER, GM}}
+0=DR:PwrStdKit1 {{DrumKit=POWER, XG}}
+1=DR:PwrStdKit2 {{DrumKit=POWER, XG}}
 2=DR:HyprStdKit
 3=DR:DryStd Kit
 4=DR:ModRockKit
@@ -1336,11 +1336,11 @@
 18=DR:Trance Kit
 19=DR:Psych Kit
 20=DR:ChllOutKit
-21=DR:Brush Kit {{DrumKit=BRUSH, GM}}
-22=DR:Jazz Kit {{DrumKit=JAZZ, GM}}
+21=DR:Brush Kit {{DrumKit=BRUSH, XG}}
+22=DR:Jazz Kit {{DrumKit=JAZZ, XG}}
 23=DR:Pop Latin
-24=DR:AnlgT9 Kit {{DrumKit=ANALOG, GM}}
-25=DR:AnlgT8 Kit {{DrumKit=ANALOG, GM}}
+24=DR:AnlgT9 Kit {{DrumKit=ANALOG, XG}}
+25=DR:AnlgT8 Kit {{DrumKit=ANALOG, XG}}
 26=DR:Tekno Kit
 27=DR:HouseKit 1
 28=DR:HouseKit 2
@@ -1350,14 +1350,14 @@
 32=DR:DnB Kit
 33=DR:Acid Kit
 34=DR:Jungle Kit
-35=DR:ElectrcKit {{DrumKit=ELECTRONIC, GM}}
+35=DR:ElectrcKit {{DrumKit=ELECTRONIC, XG}}
 36=DR:Human Kit
 37=DR:Hard Kit
 38=DR:DistrtdKit
 39=DR:AmbientKit
 40=DR:Garage Kit
 41=DR:SynPop Kit
-42=DR:Orch Kit {{DrumKit=ORCHESTRA, GM}}
+42=DR:Orch Kit {{DrumKit=ORCHESTRA, XG}}
 43=DR:DrmMachKit
 44=DR:RckMultKit
 45=DR:HH MutlKit
@@ -1374,14 +1374,14 @@
 56=DR:Dance Snrs
 57=DR:Spec SFXs
 58=DR:Synth Kit
-59=DR:SFX Kit {{DrumKit=SFX, GM}}
+59=DR:SFX Kit {{DrumKit=SFX, XG}}
 60=DR:Initialize
 61=DR:Initialize
 62=DR:Initialize
 63=DR:Initialize
 
 [DR:GM]
-0=DR:St. GM Kit {{DrumKit=STANDARD, GM}}
+0=DR:St. GM Kit {{DrumKit=STANDARD, XG}}
 
 [DR:USR]
 0=001 (A01)
@@ -1400,18 +1400,20 @@
 ; {{ UseGsInstruments }}       => For melodic instrument selection a GS Sysex message will be sent to make sure channel is in melodic mode
 ; {{ UseGsDrumsInstruments }}  => For drums instrument selection a GS Sysex message will be sent to make sure channel is in percussion mode
 ;
+; Don't adjust the instrument definitions because you will get wrong instrument selections on the MX
+
 [MX]
-Patch[8064]=PRE1 {{ UseGsInstruments }}
-Patch[8065]=PRE2 {{ UseGsInstruments }}
-Patch[8066]=PRE3 {{ UseGsInstruments }}
-Patch[8067]=PRE4 {{ UseGsInstruments }}
-Patch[8068]=PRE5 {{ UseGsInstruments }}
-Patch[8069]=PRE6 {{ UseGsInstruments }}
-Patch[8070]=PRE7 {{ UseGsInstruments }}
-Patch[8071]=PRE8 {{ UseGsInstruments }}
-Patch[0]=GM {{ UseGsInstruments }}
+Patch[8064]=PRE1
+Patch[8065]=PRE2
+Patch[8066]=PRE3 
+Patch[8067]=PRE4
+Patch[8068]=PRE5
+Patch[8069]=PRE6
+Patch[8070]=PRE7
+Patch[8071]=PRE8
+Patch[0]=GM 
 Patch[8072]=USER
-Patch[8096]=DR:PRE {{ UseGsDrumsInstruments }}
-Patch[16256]=DR:GM {{ UseGsDrumsInstruments }}
-Patch[8104]=DR:USR {{ UseGsDrumsInstruments }}
+Patch[8096]=DR:PRE
+Patch[16256]=DR:GM
+Patch[8104]=DR:USR
 Patch[*]=1..128
